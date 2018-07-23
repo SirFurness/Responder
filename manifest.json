@@ -7,6 +7,6 @@
 
     "content_scripts": [{
         "matches": ["*://hangouts.google.com/*"],
-        "js": ["insertMessage.js"]
+        "js": ["listenForChatWindow.js", "insertButton.js", "removeButton.js", "insertMessage.js"]
     }]
 }
