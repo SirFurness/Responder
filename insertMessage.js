@@ -64,8 +64,14 @@ let part3 = ["bud",
          "buddy boy",
         ];
 
+function removeBackgroundText(parentNode) {
+    parentNode.setAttribute("class", "My rq");
+}
+
 function insertMessage() {
-    this.parentNode.childNodes[2].childNodes[2].childNodes[0].childNodes[1].innerHTML = getResponse();
+    let inputDiv = this.parentNode.childNodes[2].childNodes[2].childNodes[0].childNodes[1];
+    inputDiv.innerHTML = getResponse();
+    removeBackgroundText(this.parentNode);
 }
 
 function get(list) {
