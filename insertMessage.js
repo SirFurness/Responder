@@ -77,5 +77,5 @@ function get(list) {
 }
 
 function getResponse() {
-    return (get(part1) + " " + get(part2) + " " + get(part3));
+    return (get(part1) + " " + get(part2) + ", " + get(part3));
 }
