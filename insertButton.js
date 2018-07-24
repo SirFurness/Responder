@@ -6,31 +6,26 @@ function insertButton(iframe) {
     }, true);
 }
 
-function createDiv() {
+function createImageDiv() {
     let div = document.createElement("div");
     var imgURL = chrome.extension.getURL("thumb.png");
     div.setAttribute("style", "background-image: url("+imgURL+");height:24px;width:24px;");
     return div;
 }
 
-function createButton() {
+function addButton(node) {
     let button = document.createElement("button");
     button.addEventListener("click", insertMessage, true);
     button.setAttribute("class", "uq");
-    button.setAttribute("style", "margin-left:5px");
+    button.setAttribute("style", "margin-left:5px;");
 
-    let div = createDiv();
-    button.appendChild(div);
+    let imageDiv = createImageDiv();
+    button.appendChild(imageDiv);
 
-    return button;
-}
-
-function addButton(node) {
-    let button = createButton();
     node.append(button);
 }
 
-function changeEmojiButton(node) {
+function fixEmojiButtonPlacement(node) {
     let emojiButton = node.childNodes[0];
     emojiButton.setAttribute("style", "bottom:30px;");
 }
@@ -40,7 +35,7 @@ function loopThroughAddedNodes(addedNodes) {
         if(addedNodes[i].classList == "lZ ca92t") {
             let node = addedNodes[i].childNodes[3];
             addButton(node);
-            changeEmojiButton(node);
+            fixEmojiButtonPlacement(node);
             return true;
         }
     }
@@ -57,10 +52,7 @@ function loopThroughMutationList(mutationList) {
 }
 
 var iframeCallback = function(mutationList) {
-    try {
-        loopThroughMutationList(mutationList);
-    } catch(err) {
-    }
+    loopThroughMutationList(mutationList);
 };
 
 var iframeObserver = new MutationObserver(iframeCallback);

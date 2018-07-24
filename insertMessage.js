@@ -1,68 +1,62 @@
-function random(max) {
-    return Math.floor(Math.random()*(max+1));
-}
-
 let part1 = ["Really",
-              "Galumphingly",
-              "Totally",
-              "Undoubtedly",
-              "Radically",
-              "Absolutely",
-              "Utterly",
-              "Stupendously",
-              "Extremely",
-              "Uncomfortably",
-              "Awfully",
-              "Insanely",
-              "Incredibly",
-              "Ridiculously",
-              "Like, Totally",
-              "Like, Really",
-              "Like, Utterly",
-        ];
+             "Galumphingly",
+             "Totally",
+             "Undoubtedly",
+             "Radically",
+             "Absolutely",
+             "Utterly",
+             "Stupendously",
+             "Extremely",
+             "Uncomfortably",
+             "Awfully",
+             "Insanely",
+             "Incredibly",
+             "Ridiculously",
+             "Like, Totally",
+             "Like, Really",
+             "Like, Utterly",
+            ];
 let part2 = ["Awesome",
-        "Gyrations",
-        "Tubular",
-        "Rad",
-        "Remorseful",
-        "Litty",
-        "Interesting",
-        "Funky",
-        "Wild",
-        "Organic",
-        "Poppin",
-        "Ridiculous",
-        "Insane",
-        "Extreme",
-        "Saucy",
-        "Thicc",
-        "Juicy",
-        "Radical",
-        "Gnarly",
-        "Grody",
-        "Trippin'",
-        "Mental",
-        "Bodacious",
-        ];
+             "Gyrating",
+             "Tubular",
+             "Rad",
+             "Remorseful",
+             "Litty",
+             "Interesting",
+             "Funky",
+             "Wild",
+             "Organic",
+             "Poppin",
+             "Ridiculous",
+             "Insane",
+             "Extreme",
+             "Saucy",
+             "Juicy",
+             "Radical",
+             "Gnarly",
+             "Grody",
+             "Trippin'",
+             "Mental",
+             "Bodacious",
+            ];
 let part3 = ["bud",
-         "buddy",
-         "bro",
-         "lil yeetus",
-         "broski",
-         "fam",
-         "boi",
-         "thiccy",
-         "squadfam",
-         "brother",
-         "litfam",
-         "budboy",
-         "amigo",
-         "dude",
-         "dude bro",
-         "chum",
-         "friendo",
-         "buddy boy",
-        ];
+             "buddy",
+             "bro",
+             "lil yeetus",
+             "broski",
+             "fam",
+             "boi",
+             "squadfam",
+             "brother",
+             "litfam",
+             "budboy",
+             "amigo",
+             "dude",
+             "dude bro",
+             "chum",
+             "friendo",
+             "buddy boy",
+            ];
 
 function removeBackgroundText(parentNode) {
     parentNode.setAttribute("class", "My rq");
@@ -74,8 +68,12 @@ function insertMessage() {
     removeBackgroundText(this.parentNode);
 }
 
+function random(max) {
+    return Math.floor(Math.random()*max);
+}
+
 function get(list) {
-    return list[random(list.length-1)];
+    return list[random(list.length)];
 }
 
 function getResponse() {
