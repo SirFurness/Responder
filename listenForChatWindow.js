@@ -1,10 +1,11 @@
 var targetNode = document.getElementById("yDmH0d");
 
-var config = {childList: true};
+var config = {childList: true, subtree: true};
 
-var callback = function(mutationsList) {
+var bodyCallback = function(mutationsList) {
+    console.log(mutationsList);
     try {
-        if(mutationsList[0].addedNodes[0].classList[0] == "Cl") {
+        if(mutationsList[0].addedNodes[0].classList[0] == "Xyqxtc" && mutationsList[0].target.className == "Cl") {
             insertButton(mutationsList[0].addedNodes[0]);
             console.log("added chat window");
         }
@@ -16,7 +17,7 @@ var callback = function(mutationsList) {
             }
         } catch(err) {}
     }
-}
+};
 
-var observer = new MutationObserver(callback);
+var observer = new MutationObserver(bodyCallback);
 observer.observe(targetNode, config);
