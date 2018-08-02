@@ -1,45 +1,4 @@
-let part1 = ["Really",
-             "Galumphingly",
-             "Totally",
-             "Undoubtedly",
-             "Radically",
-             "Absolutely",
-             "Utterly",
-             "Stupendously",
-             "Extremely",
-             "Uncomfortably",
-             "Awfully",
-             "Insanely",
-             "Incredibly",
-             "Ridiculously",
-             "Like, Totally",
-             "Like, Really",
-             "Like, Utterly",
-            ];
-let part2 = ["Awesome",
-             "Gyrating",
-             "Tubular",
-             "Rad",
-             "Remorseful",
-             "Litty",
-             "Interesting",
-             "Funky",
-             "Wild",
-             "Organic",
-             "Poppin",
-             "Ridiculous",
-             "Insane",
-             "Extreme",
-             "Saucy",
-             "Juicy",
-             "Radical",
-             "Gnarly",
-             "Grody",
-             "Trippin'",
-             "Mental",
-             "Bodacious",
-            ];
-let part3 = ["bud",
+let nouns = ["bud",
              "buddy",
              "bro",
              "lil yeetus",
@@ -77,5 +36,5 @@ function get(list) {
 }
 
 function getResponse() {
-    return (get(part1) + " " + get(part2) + ", " + get(part3));
+    return (get(adverbs) + " " + get(adjectives) + ", " + get(nouns));
 }

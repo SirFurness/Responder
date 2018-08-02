@@ -6,6 +6,6 @@
     "web_accessible_resources": ["*.jpg","*.JPG", "*.png"],
     "content_scripts": [{
         "matches": ["*://hangouts.google.com/*"],
-        "js": ["listenForChatWindow.js", "insertButton.js", "insertMessage.js"]
+        "js": ["adjectives.js", "adverbs.js", "listenForChatWindow.js", "insertButton.js", "insertMessage.js"]
     }]
 }
