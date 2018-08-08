@@ -1,22 +1,3 @@
-let nouns = ["bud",
-             "buddy",
-             "bro",
-             "lil yeetus",
-             "broski",
-             "fam",
-             "boi",
-             "squadfam",
-             "brother",
-             "litfam",
-             "budboy",
-             "amigo",
-             "dude",
-             "dude bro",
-             "chum",
-             "friendo",
-             "buddy boy",
-            ];
-
 function removeBackgroundText(parentNode) {
     parentNode.setAttribute("class", "My rq");
 }
@@ -36,5 +17,5 @@ function get(list) {
 }
 
 function getResponse() {
-    return (get(adverbs) + " " + get(adjectives) + ", " + get(nouns));
+    return (get(adverbs) + " " + get(adjectives));
 }
