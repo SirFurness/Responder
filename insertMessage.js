@@ -4,7 +4,7 @@ function removeBackgroundText(parentNode) {
 
 function insertMessage() {
     let inputDiv = this.parentNode.childNodes[2].childNodes[2].childNodes[0].childNodes[1];
-    inputDiv.innerHTML = getResponse();
+    inputDiv.innerHTML += getResponse();
     removeBackgroundText(this.parentNode);
 }
 
@@ -17,5 +17,5 @@ function get(list) {
 }
 
 function getResponse() {
-    return (get(adverbs) + " " + get(adjectives));
+    return ("that's " + get(adverbs) + " " + get(adjectives));
 }
